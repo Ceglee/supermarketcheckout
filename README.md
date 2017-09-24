@@ -48,7 +48,7 @@ But still in my opinion *FastShopCash* is MUCH BETTER implementation for
 most cases.
 
 
-*SafeShopCash* should be used only in situation when we are going to
+*SafeShopCash* we can use only in situation when we are going to
 read the price only once, at the end of the scanning, or when person
 which is going to add new functionality, is not aware of the danger of
 breaking internal state of the object. (which is kind of paradox, because
