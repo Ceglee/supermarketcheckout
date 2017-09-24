@@ -214,4 +214,9 @@ public class FastShopCashTest {
             e.printStackTrace();
         }
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void constructor_daoParameterIsNull_shouldThrowException() {
+        new FastShopCash(null);
+    }
 }
