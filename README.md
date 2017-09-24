@@ -3,9 +3,9 @@ Finally two version of the implementations has been created.
 - SafeShopCash
 - FastShopCash
 
-Both are extending same abstract class called *ShopCash* which holds
-common behaviour and dao object from which we can get product information.
-There is possibility to extend both of the implementations, but only on new
+Both are extending same abstract class called *ShopCash*, which holds
+common behaviour and dao object (from which we can get product information).
+There is possibility to extend both implementations, but only with new
 functionalities, already implemented methods has been set to final.
 
 *SafeShopCash* with each *checkBill* call, recalculates products sum
@@ -45,7 +45,7 @@ Easy and clean.
 For *FastShopCash* it wont't be so simple because we need to recalculate
 *sum* variable and take promotion factor into account.
 
-ULTIMATELY *FastShopCash* IS MUCH BETTER IMPLEMENTATION IN MOST CASES.
+FINALLY IN MY OPINION *FastShopCash* IS MUCH BETTER IMPLEMENTATION IN MOST CASES.
 
 
 *SafeShopCash* should be used only in situation when we are going to
