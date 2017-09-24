@@ -5,8 +5,8 @@ Finally two version of the implementations has been created.
 
 Both are extending same abstract class called *ShopCash*, which holds
 common behaviour and dao object (from which we can get product information).
-There is possibility to extend both implementations, but only with new
-functionalities, already implemented methods has been set to final.
+There is possibility to extend both implementations, but only we can add
+new functionalities, already implemented methods has been set to final.
 
 *SafeShopCash* for each *checkBill* call, recalculates products sum
 based on data which are stored at this point inside the object,
@@ -28,21 +28,21 @@ the first solution and the only reason why I have also created second one,
 is that extending *FastShopCash* is much easier to break internal state,
 because of the *sum* variable. For *SafeShopCash* this is almost impossible.
 
-Imagine implementation of new fuctionality for removing already scanned
+Imagine new functionality implementation for removing already scanned
 products.
 
 For *SafeShopCash* class the implementation might look like this:
 ```java
 public void remveProcuct(String productCode) {
-    int count = scannedProducts.getOrDefault(productCode, 0);
+    int count = scannedProducts.getOrDefault(productCode, 1);
     scannedProducts.put(productCode, --count);
 }
 ```
 Easy and clean.
 
 
-For *FastShopCash* it wont't be that simple because we need to recalculate
-*sum* variable and take promotion factor into account.
+For *FastShopCash* it wont't be that simple, because we need to recalculate
+*sum* variable and take *promotion* factor into account.
 
 But still in my opinion *FastShopCash* is MUCH BETTER implementation for
 most cases.
