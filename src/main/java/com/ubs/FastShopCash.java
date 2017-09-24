@@ -8,8 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FastShopCash extends ShopCash{
-    private double sum = 0;
-    private Map<String, Integer> scannedProducts = new HashMap<>();
+    protected double sum = 0;
+    protected Map<String, Integer> scannedProducts = new HashMap<>();
 
     public FastShopCash(ProductDAO dao) {
         super(dao);

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SafeShopCash extends ShopCash {
-    private Map<String, Integer> scannedProducts = new HashMap<>();
+    protected Map<String, Integer> scannedProducts = new HashMap<>();
 
     public SafeShopCash(ProductDAO dao) {
         super(dao);
