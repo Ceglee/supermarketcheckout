@@ -206,12 +206,14 @@ public class FastShopCashTest {
         shopCash.scanProduct(productCode);
         Assert.assertEquals(price, shopCash.checkBill(), 0);
 
-        try (ByteArrayOutputStream out = new ByteArrayOutputStream();
-             DataInputStream in = new DataInputStream(new ByteArrayInputStream(out.toByteArray()))) {
+        try (ByteArrayOutputStream out = new ByteArrayOutputStream()) {
             shopCash.printBill(out);
-            Assert.assertEquals(price, in.readDouble(), 0);
+            try (DataInputStream in = new DataInputStream(new ByteArrayInputStream(out.toByteArray()))) {
+                Assert.assertEquals(price, in.readDouble(), 0);
+            }
         } catch (IOException e) {
             e.printStackTrace();
+            Assert.fail();
         }
     }
 
