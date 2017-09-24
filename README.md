@@ -23,10 +23,11 @@ Very simply - for given case:
 - for *FastShopCash* we will do n computations
 - for *SafeShopCash* we will do n! computations
 
-As you can see *FastShopCash* is much faster. The only disadvantage of
-the first solution and the only reason why I have also created second one,
-is that extending *FastShopCash* is much easier to break internal state,
-because of the *sum* variable. For *SafeShopCash* this is almost impossible.
+As you can see *FastShopCash* is much faster. Its only disadvantage  and
+the only reason why I have also created second one (SafeShopCash),
+is that when we will try to extend it, it is much easier
+to break its internal state, because of the *sum* variable. On the other
+hand for *SafeShopCash* this is almost impossible.
 
 Imagine new functionality implementation for removing already scanned
 products.
