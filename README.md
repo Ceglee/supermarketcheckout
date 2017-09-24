@@ -24,7 +24,7 @@ Very simply - for given case:
 - for *SafeShopCash* we will do n! computations
 
 As you can see *FastShopCash* is much faster. Its only disadvantage  and
-the only reason why I have also created second one (SafeShopCash),
+the only reason why I have also created second solution (SafeShopCash),
 is that when we will try to extend it, it is much easier
 to break its internal state, because of the *sum* variable. On the other
 hand for *SafeShopCash* this is almost impossible.
