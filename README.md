@@ -21,7 +21,7 @@ Very simply - for given case:
 > User adds n same products and checks price after each scan
 
 - for *FastShopCash* we will do n computations
-- for *SafeShopCash* we will do n! computations
+- for *SafeShopCash* we will do 1 + 2 + ... + (n - 1) + n computations
 
 As you can see *FastShopCash* is much faster. Its only disadvantage  and
 the only reason why I have also created second solution (SafeShopCash),
